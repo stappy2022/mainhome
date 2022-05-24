@@ -42,8 +42,6 @@ class A(private val c: Context) : PagerAdapter() {
         //이미지가 설정된 view의 정보를 반환함
         return v
     }
-    // 1.5 초 간격으로 배너 페이지 넘어감
-    private val intervalTime = 1500.toLong()
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
         container.invalidate()
