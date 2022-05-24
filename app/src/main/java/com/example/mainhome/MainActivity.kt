@@ -3,8 +3,7 @@ package com.example.mainhome
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
-import android.os.Handler
-import android.os.Looper
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,5 +17,13 @@ class MainActivity : AppCompatActivity() {
         vp = findViewById(R.id.vp) as ViewPager
         vp.adapter = A(this)
 
+    }
+
+    inner class PagerRunnable : Runnable {
+        override fun run() {
+            while (true) {
+                Thread.sleep(2000)
+            }
+        }
     }
 }
