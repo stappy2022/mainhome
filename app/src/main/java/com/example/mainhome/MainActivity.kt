@@ -18,12 +18,4 @@ class MainActivity : AppCompatActivity() {
         vp.adapter = A(this)
 
     }
-
-    inner class PagerRunnable : Runnable {
-        override fun run() {
-            while (true) {
-                Thread.sleep(2000)
-            }
-        }
-    }
 }
